@@ -28,7 +28,7 @@ cd Api-list-todo
 
 ### 2️⃣ Configure o Banco de Dados
 Altere as configurações no arquivo application.properties para conectar ao seu banco de dados:
-
+```bash
 properties
 
 Copiar
@@ -42,12 +42,12 @@ spring.datasource.username=seu_usuario
 spring.datasource.password=sua_senha
 
 spring.jpa.hibernate.ddl-auto=update
-
+```
 --- 
 
 
 ### 3️⃣ Compile e Execute a Aplicação
-bash
+```bash
 
 Copiar
 
@@ -58,7 +58,7 @@ mvn spring-boot:run
 A API estará disponível em:
 
 ##### 📌 http://localhost:8080/api/todos
-
+```
 --- 
 
 ### 4️⃣ Testando a API
