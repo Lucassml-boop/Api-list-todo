@@ -56,9 +56,9 @@ Editar
 mvn spring-boot:run
 
 A API estará disponível em:
-
-##### 📌 http://localhost:8080/api/todos
 ```
+##### 📌 http://localhost:8080/api/todos
+
 --- 
 
 ### 4️⃣ Testando a API
