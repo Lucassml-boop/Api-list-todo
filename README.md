@@ -9,7 +9,7 @@ Este projeto é uma **API REST** para gerenciamento de tarefas (**To-Do List**),
 - 🛠 **Spring Boot** (Framework principal)  
 - 🔐 **Spring Security** (Autenticação e segurança com JWT)  
 - 🗃 **JPA/Hibernate** (Persistência de dados)  
-- 🏦 **MySQL ou PostgreSQL** (Banco de dados relacional)  
+- 🏦 **PostgreSQL** (Banco de dados relacional)  
 - 📄 **Swagger** (Documentação da API)  
 - 📦 **Maven** (Gerenciador de dependências)  
 
