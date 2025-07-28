@@ -1,49 +1,67 @@
-# 📌 API Lista de Tarefas (To-Do List) - Spring Boot 🚀
+# 🚀 API Lista de Tarefas (To-Do List) - Spring Boot
 
-Bem-vindo ao repositório da **API Lista de Tarefas**, um projeto desenvolvido com **Spring Boot** para gerenciar tarefas de forma eficiente e segura. Este projeto demonstra habilidades em desenvolvimento backend, autenticação JWT, persistência de dados e documentação de APIs.
-
----
-
-## 🛠 Tecnologias Utilizadas  
-
-- **Spring Boot**: Framework principal para construção da API.  
-- **Spring Security**: Implementação de autenticação e autorização com JWT.  
-- **JPA/Hibernate**: Mapeamento objeto-relacional para persistência de dados.  
-- **PostgreSQL**: Banco de dados relacional utilizado.  
-- **Swagger**: Documentação interativa da API.  
-- **Maven**: Gerenciador de dependências e build.  
+Bem-vindo ao repositório da **API Lista de Tarefas**, um projeto backend robusto e seguro desenvolvido com **Spring Boot**. Esta API foi criada para demonstrar habilidades em autenticação JWT, arquitetura limpa, persistência de dados e documentação de APIs — tudo pronto para produção e fácil de evoluir.
 
 ---
 
-## ✨ Funcionalidades  
+## 📑 Sumário
 
-- Registro e autenticação de usuários com **JWT**.  
-- Operações CRUD para gerenciamento de tarefas.  
-- Proteção de rotas com autenticação baseada em token.  
-- Documentação interativa com **Swagger UI**.  
-- Configuração flexível para diferentes ambientes de banco de dados.  
+- [Sobre o Projeto](#sobre-o-projeto)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Funcionalidades](#funcionalidades)
+- [Como Executar](#como-executar)
+- [Documentação da API](#documentação-da-api)
+- [Estrutura do Projeto](#estrutura-do-projeto)
+- [Diferenciais Técnicos](#diferenciais-técnicos)
+- [Contato](#contato)
 
 ---
 
-## 🚀 Como Executar o Projeto  
+## 💡 Sobre o Projeto
 
-### 1️⃣ Pré-requisitos  
+Esta API permite o gerenciamento de tarefas (to-do list) com autenticação segura via JWT, seguindo as melhores práticas de desenvolvimento backend. O projeto é ideal para ser utilizado como base em aplicações reais ou como portfólio profissional.
 
-Certifique-se de ter instalado:  
-- **Java 17** ou superior  
-- **Maven**  
-- **PostgreSQL**  
+---
 
-### 2️⃣ Clone o Repositório  
+## 🛠 Tecnologias Utilizadas
+
+- **Spring Boot** — Framework principal para construção da API
+- **Spring Security** — Autenticação e autorização com JWT
+- **JPA/Hibernate** — Persistência de dados
+- **PostgreSQL** — Banco de dados relacional
+- **Swagger** — Documentação interativa da API
+- **Maven** — Gerenciamento de dependências e build
+
+---
+
+## ✨ Funcionalidades
+
+- Registro e autenticação de usuários com **JWT**
+- Operações CRUD completas para tarefas
+- Proteção de rotas sensíveis com autenticação
+- Documentação interativa via **Swagger UI**
+- Configuração flexível para múltiplos ambientes
+
+---
+
+## 🚀 Como Executar
+
+### 1. Pré-requisitos
+
+- **Java 17** ou superior
+- **Maven**
+- **PostgreSQL**
+
+### 2. Clone o Repositório
 
 ```bash
 git clone https://github.com/Lucassml-boop/Api-list-todo.git
 cd Api-list-todo
 ```
 
-### 3️⃣ Configure o Banco de Dados  
+### 3. Configure o Banco de Dados
 
-Edite o arquivo `application.properties` com as credenciais do seu banco de dados:  
+Edite o arquivo `application.properties`:
 
 ```properties
 spring.datasource.url=jdbc:postgresql://localhost:5432/seu_banco
@@ -52,7 +70,7 @@ spring.datasource.password=sua_senha
 spring.jpa.hibernate.ddl-auto=update
 ```
 
-### 4️⃣ Compile e Execute a Aplicação  
+### 4. Compile e Execute
 
 ```bash
 mvn spring-boot:run
@@ -63,19 +81,19 @@ A API estará disponível em:
 
 ---
 
-## 📜 Documentação da API  
+## 📜 Documentação da API
 
-Acesse a documentação interativa no Swagger:  
+Acesse a documentação interativa:  
 **http://localhost:8080/swagger-ui.html**
 
-### 🔐 Rotas de Autenticação  
+### 🔐 Rotas de Autenticação
 
 | Método | Rota               | Descrição                     |
 |--------|--------------------|-------------------------------|
 | POST   | /api/auth/register | Registra um novo usuário      |
 | POST   | /api/auth/login    | Autentica e retorna um token  |
 
-### 📌 Rotas de Tarefas (Protegidas por JWT)  
+### 📌 Rotas de Tarefas (Protegidas por JWT)
 
 | Método | Rota              | Descrição                     |
 |--------|-------------------|-------------------------------|
@@ -86,53 +104,55 @@ Acesse a documentação interativa no Swagger:
 
 ---
 
-## 🧪 Testando a API  
+## 🧪 Testando a API
 
-### Usando Postman  
+### Usando Postman
 
-1. Autentique-se na rota `/api/auth/login` para obter o token JWT.  
-2. Adicione o token no cabeçalho das requisições:  
+1. Autentique-se em `/api/auth/login` para obter o token JWT.
+2. Adicione o token no cabeçalho das requisições:
    ```bash
    Authorization: Bearer <seu_token>
    ```
 
-### Usando Swagger  
+### Usando Swagger
 
 Acesse o Swagger UI para testar as rotas de forma interativa:  
 **http://localhost:8080/swagger-ui.html**
 
 ---
 
-## 📂 Estrutura do Projeto  
+## 📂 Estrutura do Projeto
 
 ```plaintext
 Api-list-todo/
 ├── src/
 │   ├── main/
 │   │   ├── java/
-│   │   │   ├── com.example.todo/
-│   │   │   │   ├── controller/  # Controladores REST
-│   │   │   │   ├── model/       # Modelos de dados
-│   │   │   │   ├── repository/  # Repositórios JPA
-│   │   │   │   ├── service/     # Regras de negócio
-│   │   │   │   └── security/    # Configurações de segurança
-│   │   ├── resources/
-│   │   │   ├── application.properties  # Configurações da aplicação
+│   │   │   └── com.todo.todolist/
+│   │   │       ├── controller/  # Controladores REST
+│   │   │       ├── model/       # Modelos de dados
+│   │   │       ├── repository/  # Repositórios JPA
+│   │   │       ├── service/     # Regras de negócio
+│   │   │       └── security/    # Configurações de segurança
+│   ├── resources/
+│   │   └── application.properties  # Configurações da aplicação
 ├── pom.xml  # Dependências do Maven
 ```
 
 ---
 
-## 💡 Diferenciais  
+## 🏆 Diferenciais Técnicos
 
-- **Boas práticas**: Código limpo, modular e seguindo princípios de design.  
-- **Segurança**: Implementação robusta de autenticação e autorização.  
-- **Escalabilidade**: Estrutura preparada para crescimento do projeto.  
+- **Código limpo e modular**: Seguindo princípios SOLID e boas práticas de arquitetura.
+- **Segurança robusta**: JWT, criptografia de senhas e proteção de endpoints.
+- **Escalabilidade**: Estrutura preparada para crescimento e fácil manutenção.
+- **Documentação clara**: Swagger UI integrado para facilitar testes e integração.
+- **Pronto para produção**: Configuração flexível e fácil deploy.
 
 ---
 
-## 📞 Contato  
+## 📞 Contato
 
 Se você gostou deste projeto e deseja saber mais, entre em contato:  
-**Email**: lucas.sml@example.com  
-**LinkedIn**: [linkedin.com/in/lucassml](https://linkedin.com/in/lucassml)
+**Email**: lucas.sml@example.com
+**LinkedIn**: [linkedin.com/in/lucassml](https://www.linkedin.com/in/lucas-samuel-borges-b551481b8/)
